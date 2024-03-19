@@ -1,6 +1,6 @@
 package com.artemis.tester
 
-import jakarta.jms.ConnectionFactory
+import javax.jms.ConnectionFactory
 import org.apache.activemq.artemis.jms.client.ActiveMQDestination
 import org.springframework.jms.core.JmsTemplate
 import org.springframework.jms.support.converter.MessageConverter

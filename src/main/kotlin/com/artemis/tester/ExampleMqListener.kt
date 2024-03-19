@@ -1,7 +1,7 @@
 package com.artemis.tester
 
-import jakarta.jms.Message
-import jakarta.jms.MessageListener
+import javax.jms.Message
+import javax.jms.MessageListener
 import kotlinx.coroutines.runBlocking
 import org.slf4j.LoggerFactory
 import org.springframework.jms.support.converter.MessageConverter
