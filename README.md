@@ -1,5 +1,25 @@
 # artemis-tester
 
+## How to run the application
+
+Provide environment variables for Artemis connection:
+```
+mq.front.url - address to Artemis broker
+mq.front.user - artemis brokes user
+mq.front.password - artemis broker password
+```
+
+And run the application using command:
+```
+./gradlew bootRun --args='--mq.front.url=<url> --mq.front.user=<user> --mq.front.password=<user>'
+```
+
+For example:
+```
+./gradlew bootRun --args='--mq.front.url=tcp://localhost:61616 --mq.front.user=artemis --mq.front.password=artemis'
+```
+
+## The problem 
 Example Artemis sender and listener implementation with JMS, Spring Boot which causes AMQ224016 error on server side of Artemis ActiveMQ (even using latest 2.32.0 version with default configuration, newly created single instance).
 
 Application sends example message to queue and then listens to same queue.
